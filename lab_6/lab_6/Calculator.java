@@ -1,0 +1,65 @@
+package lab_6;
+
+import java.util.Scanner;
+
+public class Calculator {
+	
+	 	private int num1;
+	    private int num2;
+	    private String operator;
+
+	    public Calculator() {
+	        Scanner jarvis = new Scanner(System.in);
+	        System.out.print("Input the first number: ");
+	        num1 = Integer.parseInt(jarvis.nextLine());
+
+	        System.out.print("Input the operator (+,-,*,/): ");
+	        operator = jarvis.nextLine();
+
+	        System.out.print("Input the second number: ");
+	        num2= Integer.parseInt(jarvis.nextLine());
+
+	        switch (operator){
+	            case "+":
+	                System.out.println(num1 + num2);
+	                break;
+	           
+	            case "-":
+	                System.out.println(num1 - num2);
+	                break;
+	           
+	            case "*":
+	                System.out.println(num1 * num2);
+	                break;
+	            
+	            case "/":
+	                System.out.println(num1 / num2);
+	                break;
+	            
+	            default:
+	                break;
+	        }
+	    }
+
+	    public String add(int a, int b) {
+	        int sum = a + b;
+	        return a + " + " + b + " = " + sum;
+	    }
+
+	    public String subtract(int a, int b) {
+	        int diff = a - b;
+	        return a + " - " + b + " = "+ diff;
+	    }
+
+	    public String multiply(int a, int b) {
+	        int prod = a * b;
+	        return a + " * " + b + " = " + prod;
+	    }
+
+	    public String divide(int a, int b) {
+	        int quot = a / b;
+	        return a + "/" + b + " = " + quot;
+	    }
+  
+	   
+}
